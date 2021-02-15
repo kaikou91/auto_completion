@@ -8,8 +8,22 @@ h1 {
     text-align: center;
 }
 
+#Recherche {
+    align-items: center;
+}
+
+.li {
+    display: block;
+    background-color: white;
+    border: gray;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 #mapid {
-    height: 300px;
+    height: 600px;
 }
 
 li {

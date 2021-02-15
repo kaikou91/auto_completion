@@ -25,12 +25,24 @@ myInput.addEventListener('keyup', (event) => {
                 data.hits.forEach(element => {
                     // console.log(element.locale_names.default)
                     autoCm.insertAdjacentHTML('beforeend', `
-                <li>${element.locale_names.default}</li>
+                <button class="li">${element.locale_names.default}</button>
                 `)
                 });
         })
 
 });
+
+// const elementList = document.querySelectorAll(".li")
+// for (let i = 0; i < elementList.length; i++) {
+//     console.log(elementList[i])
+//     const elementList = elementList[i]
+//     element.addEventListener("click", () => {
+//         console.log(element[i])
+//     })
+// };
+// autoCm.addEventListener("click", (event) => {
+//     event.preventDefault();
+// });
 
 //mapGéo
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2Fpa291IiwiYSI6ImNra3h1dGllZzAzZzcyb3Fvdmx0MzNvMWIifQ.E2Bj_8bT4qrVsTzkQmrroA', {
@@ -44,8 +56,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 //indicateur//
 var marker = L.marker([lat, long]).addTo(mymap);
 
-
-btnOk.addEventListener('click', (event) => {
+autoCm.addEventListener('click', (event) => {
     event.preventDefault();
 
 
@@ -67,3 +78,13 @@ btnOk.addEventListener('click', (event) => {
         })
 
 });
+//leaflet
+
+
+// function valeurVent() {
+//     if (unitesChoisies.vent == 0) {
+//         return valeursCourantes.vent;
+//     } else {
+//         return valeursCourantes.vent / 3.6;
+//     }
+// };
